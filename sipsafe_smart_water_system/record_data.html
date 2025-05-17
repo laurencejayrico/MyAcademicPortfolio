@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Filtration - SIPSAFE</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">SIPSAFE</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Record Water Filtration</h2>
+        <form action="record_data.php" method="POST">
+            <label for="water_type">Water Type:</label>
+            <select name="water_type" id="water_type" required>
+                <option value="Alkaline">Alkaline</option>
+                <option value="Mineral">Mineral</option>
+                <option value="Tap">Tap</option>
+            </select>
+
+            <label for="pH_quality">pH Quality:</label>
+            <input type="number" name="pH_quality" id="pH_quality" step="0.1" required>
+
+            <label for="tds_quality">TDS Quality:</label>
+            <input type="number" name="tds_quality" id="tds_quality" step="0.1" required>
+
+            <label for="turbidity_quality">Turbidity Quality:</label>
+            <input type="number" name="turbidity_quality" id="turbidity_quality" step="0.1" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

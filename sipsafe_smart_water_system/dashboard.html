@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPSAFE Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">SIPSAFE</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="record_data.html">Record Filtration</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h1>Welcome, <span id="username">User</span>!</h1>
+            <p>Monitor and manage your water filtration system with ease.</p>
+        </section>
+
+        <section class="stats">
+            <h2>Water Filtration Statistics</h2>
+            <div class="stats-grid">
+                <div class="card">
+                    <h3>Alkaline Water</h3>
+                    <p>Times Chosen: <span id="alkaline-count">0</span></p>
+                    <p>Average pH: <span id="alkaline-ph">0.0</span></p>
+                    <p>Average TDS: <span id="alkaline-tds">0.0</span></p>
+                </div>
+                <div class="card">
+                    <h3>Mineral Water</h3>
+                    <p>Times Chosen: <span id="mineral-count">0</span></p>
+                    <p>Average pH: <span id="mineral-ph">0.0</span></p>
+                    <p>Average TDS: <span id="mineral-tds">0.0</span></p>
+                </div>
+                <div class="card">
+                    <h3>Tap Water</h3>
+                    <p>Times Chosen: <span id="tap-count">0</span></p>
+                    <p>Average pH: <span id="tap-ph">0.0</span></p>
+                    <p>Average TDS: <span id="tap-tds">0.0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="records">
+            <h2>Your Recorded Filtration Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Water Type</th>
+                        <th>pH Quality</th>
+                        <th>TDS Quality</th>
+                        <th>Turbidity Quality</th>
+                        <th>Recorded At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="record-table">
+                    <!-- Records will be populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
